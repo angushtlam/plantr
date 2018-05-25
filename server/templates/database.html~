@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="page-header">
+		<h1>List View of Latest Updates</h1>
+		<p class="lead">Shows all database items in a list form.</p>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-4"><h3>Date:</h3></div>
+		<div class="col-md-8"><h3>Raw Message Data:</h3></div>
+	</div>
+	
+	{% for entry in entries %}
+		<div class="row">
+			<div class="col-md-4">{{ entry.time }}</div>
+			<div class="col-md-8">{{ entry.data|safe }}</div>
+		</div>
+	{% else %}
+		<div class="row">
+			<div class="col-md-12">No values have been recorded.</div>
+		</div>
+	{% endfor %}
+
+	<meta http-equiv="refresh" content="3"; URL="#">
+{% endblock %}
