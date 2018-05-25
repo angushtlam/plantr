@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="page-header">
+		<h1>Metrics Overview</h1>
+		
+		{% for entry in entries %}
+		<div class="row">
+			<div class="col-md-4">{{ entry.time }}</div>
+			<div class="col-md-8">{{ entry.data|safe }}</div>
+		</div>
+		{% else %}
+		<div class="row">
+			<div class="col-md-12">No values have been recorded.</div>
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}

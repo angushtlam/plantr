@@ -10,23 +10,22 @@
     <!-- Bootstrap -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/raphael-min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/morris.js') }}"></script>
-    
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/morris.min.js') }}"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ url_for('static', filename='css/morris.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	  <!--[if lt IE 9]>
+	  	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <![endif]-->
   </head>
  	<body>
  		<!-- Static navbar -->
-		<nav class="navbar navbar-default navbar-static-top">
+		<nav class="navbar navbar-inverse navbar-static-top">
 		  <div class="container">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,21 +42,21 @@
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Metrics <span class="caret"></span></a>
 		          <ul class="dropdown-menu">
-		            <li><a href="/metrics">Overview</a></li>
+		            <li><a href="#/metrics">Overview</a></li>
 		            <li role="separator" class="divider"></li>
 		            <li class="dropdown-header">Details</li>
-		            <li><a href="/metrics/temp">Temperature</a></li>
-		            <li><a href="/metrics/ph">pH</a></li>
-		            <li><a href="/metrics/humidity">Humidity</a></li>
+		            <li><a href="#/metrics/temp">Temperature</a></li>
+		            <li><a href="#/metrics/ph">pH</a></li>
+		            <li><a href="#/metrics/humidity">Humidity</a></li>
 		          </ul>
 		        </li>
 		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">History <span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li class="dropdown-header">Graphs</li>
-		            <li><a href="/graphs/temp">Temperature</a></li>
-		            <li><a href="/graphs/ph">pH</a></li>
-		            <li><a href="/graphs/humidity">Humidity</a></li>
+		            <li><a href="#/graphs/temp">Temperature</a></li>
+		            <li><a href="#/graphs/ph">pH</a></li>
+		            <li><a href="#/graphs/humidity">Humidity</a></li>
 		            <li role="separator" class="divider"></li>
 		            <li class="dropdown-header">Advanced</li>
 		            <li><a href="/database">Verbose List</a></li>

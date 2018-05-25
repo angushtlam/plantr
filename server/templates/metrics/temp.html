@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="page-header">
+		<h1>Temperature History</h1>
+
+		<div id="graph">
+			<script type="text/javascript">
+				var day_data = [];
+
+				{% for entry in entries %}
+					day_data.push({"time": {{ entry.time }}, "temp": {{ entry.data|safe }}});
+				{% else %}
+				{% endfor %}
+
+				Morris.Line({
+				  element: 'graph',
+				  data: day_data,
+				  xkey: 'time',
+				  ykeys: ['temp'],
+				  labels: ['Temperature']
+				});
+			</script>
+		</div>
+	</div>
+{% endblock %}
